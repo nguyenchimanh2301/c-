@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Desso30_NGUYENCHIMANHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="infopsv_f3_Result">
+    <Property Name="mahd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tiendien" Type="Int32" />
+    <Property Name="tiennuoc" Type="Int32" />
+    <Property Name="tienvs" Type="Int32" />
+    <Property Name="tongtien" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="inforsv_f4_Result">
+    <Property Name="masv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="hoten" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ngaysinh" Type="DateTime" />
+    <Property Name="diachi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="malop" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ngaydangki" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="sumtp_f1_Result">
+    <Property Name="masv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="hoten" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ngaysinh" Type="DateTime" />
+    <Property Name="diachi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="malop" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ngayra" Type="DateTime" />
+  </ComplexType>
+  <EntityType Name="chitietphongkt">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="solsv" Type="Int32" />
+    <Property Name="controng" Type="Int32" />
+    <Property Name="vitri" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Phongkt" Relationship="Self.FK__chitietph__mapho__48CFD27E" FromRole="chitietphongkt" ToRole="Phongkt" />
+  </EntityType>
+  <EntityType Name="Hoadonphong">
+    <Key>
+      <PropertyRef Name="mahd" />
+    </Key>
+    <Property Name="mahd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tiendien" Type="Int32" />
+    <Property Name="tiennuoc" Type="Int32" />
+    <Property Name="tienvs" Type="Int32" />
+    <Property Name="tongtien" Type="Int32" />
+    <NavigationProperty Name="Phongkt" Relationship="Self.FK__Hoadonpho__mapho__440B1D61" FromRole="Hoadonphong" ToRole="Phongkt" />
+  </EntityType>
+  <EntityType Name="Hoadonsv">
+    <Key>
+      <PropertyRef Name="mahd" />
+    </Key>
+    <Property Name="mahd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="masv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="tienphong" Type="Int32" />
+    <Property Name="tienkhac" Type="Int32" />
+    <Property Name="tongtien" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="users" />
+    </Key>
+    <Property Name="users" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Phongkt">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenday" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="vitri" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="loaiphong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="tinhtrang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="chitietphongkt" Relationship="Self.FK__chitietph__mapho__48CFD27E" FromRole="Phongkt" ToRole="chitietphongkt" />
+    <NavigationProperty Name="Hoadonphongs" Relationship="Self.FK__Hoadonpho__mapho__440B1D61" FromRole="Phongkt" ToRole="Hoadonphong" />
+    <NavigationProperty Name="SINHVIENVAOs" Relationship="Self.FK__SINHVIENV__mapho__3A81B327" FromRole="Phongkt" ToRole="SINHVIENVAO" />
+  </EntityType>
+  <EntityType Name="SINHVIENRA">
+    <Key>
+      <PropertyRef Name="masv" />
+    </Key>
+    <Property Name="masv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="hoten" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ngaysinh" Type="DateTime" Precision="0" />
+    <Property Name="diachi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="malop" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ngayra" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SINHVIENVAO">
+    <Key>
+      <PropertyRef Name="masv" />
+    </Key>
+    <Property Name="masv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="hoten" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ngaysinh" Type="DateTime" Precision="0" />
+    <Property Name="diachi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="malop" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ngaydangki" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Phongkt" Relationship="Self.FK__SINHVIENV__mapho__3A81B327" FromRole="SINHVIENVAO" ToRole="Phongkt" />
+  </EntityType>
+  <EntityType Name="viewdanhsachphong">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenday" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="vitri" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="loaiphong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="tinhtrang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="viewdanhsachsvvao">
+    <Key>
+      <PropertyRef Name="masv" />
+    </Key>
+    <Property Name="masv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="malop" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="maphong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="hoten" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="gioitinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="diachi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__chitietph__mapho__48CFD27E">
+    <End Role="Phongkt" Type="Self.Phongkt" Multiplicity="1" />
+    <End Role="chitietphongkt" Type="Self.chitietphongkt" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Phongkt">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="chitietphongkt">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hoadonpho__mapho__440B1D61">
+    <End Role="Phongkt" Type="Self.Phongkt" Multiplicity="1" />
+    <End Role="Hoadonphong" Type="Self.Hoadonphong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phongkt">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="Hoadonphong">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SINHVIENV__mapho__3A81B327">
+    <End Role="Phongkt" Type="Self.Phongkt" Multiplicity="0..1" />
+    <End Role="SINHVIENVAO" Type="Self.SINHVIENVAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phongkt">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="SINHVIENVAO">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Desso30_NGUYENCHIMANHEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="chitietphongkts" EntityType="Self.chitietphongkt" />
+    <EntitySet Name="Hoadonphongs" EntityType="Self.Hoadonphong" />
+    <EntitySet Name="Hoadonsvs" EntityType="Self.Hoadonsv" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="Phongkts" EntityType="Self.Phongkt" />
+    <EntitySet Name="SINHVIENRAs" EntityType="Self.SINHVIENRA" />
+    <EntitySet Name="SINHVIENVAOs" EntityType="Self.SINHVIENVAO" />
+    <EntitySet Name="viewdanhsachphongs" EntityType="Self.viewdanhsachphong" />
+    <EntitySet Name="viewdanhsachsvvaos" EntityType="Self.viewdanhsachsvvao" />
+    <AssociationSet Name="FK__chitietph__mapho__48CFD27E" Association="Self.FK__chitietph__mapho__48CFD27E">
+      <End Role="Phongkt" EntitySet="Phongkts" />
+      <End Role="chitietphongkt" EntitySet="chitietphongkts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hoadonpho__mapho__440B1D61" Association="Self.FK__Hoadonpho__mapho__440B1D61">
+      <End Role="Phongkt" EntitySet="Phongkts" />
+      <End Role="Hoadonphong" EntitySet="Hoadonphongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SINHVIENV__mapho__3A81B327" Association="Self.FK__SINHVIENV__mapho__3A81B327">
+      <End Role="Phongkt" EntitySet="Phongkts" />
+      <End Role="SINHVIENVAO" EntitySet="SINHVIENVAOs" />
+    </AssociationSet>
+    <FunctionImport Name="infopsv_f3" IsComposable="true" ReturnType="Collection(Desso30_NGUYENCHIMANHModel.infopsv_f3_Result)">
+      <Parameter Name="masv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="inforsv_f4" IsComposable="true" ReturnType="Collection(Desso30_NGUYENCHIMANHModel.inforsv_f4_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sumtp_f1" IsComposable="true" ReturnType="Collection(Desso30_NGUYENCHIMANHModel.sumtp_f1_Result)">
+      <Parameter Name="masv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="del_pr5">
+      <Parameter Name="map" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="delsv_pr6">
+      <Parameter Name="msvr" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="selectsv_pr7" ReturnType="Collection(Desso30_NGUYENCHIMANHModel.selectsv_pr7_Result)">
+      <Parameter Name="map" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="selectsv_pr8" ReturnType="Collection(Desso30_NGUYENCHIMANHModel.selectsv_pr8_Result)">
+      <Parameter Name="malop" Mode="In" Type="String" />
+      <Parameter Name="mahd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="themhd_pr2">
+      <Parameter Name="mahd" Mode="In" Type="String" />
+      <Parameter Name="msv" Mode="In" Type="String" />
+      <Parameter Name="tp" Mode="In" Type="Int32" />
+      <Parameter Name="td" Mode="In" Type="Int32" />
+      <Parameter Name="tt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="themphong_pr1">
+      <Parameter Name="maphong" Mode="In" Type="String" />
+      <Parameter Name="day" Mode="In" Type="String" />
+      <Parameter Name="vt" Mode="In" Type="String" />
+      <Parameter Name="lp" Mode="In" Type="String" />
+      <Parameter Name="tt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="thongke_pr9" />
+    <FunctionImport Name="trungbinh_pr10" />
+  </EntityContainer>
+  <ComplexType Name="selectsv_pr7_Result">
+    <Property Type="String" Name="masv" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="maphong" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="hoten" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="gioitinh" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="ngaysinh" Nullable="true" />
+    <Property Type="String" Name="diachi" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="sdt" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="malop" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="ngaydangki" Nullable="true" />
+    <Property Type="String" Name="maphong1" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="tenday" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="vitri" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="loaiphong" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="tinhtrang" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="selectsv_pr8_Result">
+    <Property Type="String" Name="masv" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="maphong" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="hoten" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="gioitinh" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="ngaysinh" Nullable="true" />
+    <Property Type="String" Name="diachi" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="sdt" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="malop" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="ngaydangki" Nullable="true" />
+    <Property Type="String" Name="mahd" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="masv1" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="tienphong" Nullable="true" />
+    <Property Type="Int32" Name="tienkhac" Nullable="true" />
+    <Property Type="Int32" Name="tongtien" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,17 @@
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\BUSKTX.dll.config
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\BUSKTX.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\BUSKTX.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\Json.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\Json.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\obj\Debug\BUSKTX.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\obj\Debug\BUSKTX.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\obj\Debug\BUSKTX.csproj.CopyComplete
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\obj\Debug\BUSKTX.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\obj\Debug\BUSKTX.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\DAOKTX.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\DAOKTX.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\BUSKTX\bin\Debug\DAOKTX.dll.config

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Desso30_NGUYENCHIMANHModelStoreContainer" CdmEntityContainer="Desso30_NGUYENCHIMANHEntities">
+    <EntitySetMapping Name="chitietphongkts">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.chitietphongkt">
+        <MappingFragment StoreEntitySet="chitietphongkt">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="solsv" ColumnName="solsv" />
+          <ScalarProperty Name="controng" ColumnName="controng" />
+          <ScalarProperty Name="vitri" ColumnName="vitri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hoadonphongs">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.Hoadonphong">
+        <MappingFragment StoreEntitySet="Hoadonphong">
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="tiendien" ColumnName="tiendien" />
+          <ScalarProperty Name="tiennuoc" ColumnName="tiennuoc" />
+          <ScalarProperty Name="tienvs" ColumnName="tienvs" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hoadonsvs">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.Hoadonsv">
+        <MappingFragment StoreEntitySet="Hoadonsv">
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="tienphong" ColumnName="tienphong" />
+          <ScalarProperty Name="tienkhac" ColumnName="tienkhac" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.Login">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="users" ColumnName="users" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phongkts">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.Phongkt">
+        <MappingFragment StoreEntitySet="Phongkt">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="tenday" ColumnName="tenday" />
+          <ScalarProperty Name="vitri" ColumnName="vitri" />
+          <ScalarProperty Name="loaiphong" ColumnName="loaiphong" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENRAs">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.SINHVIENRA">
+        <MappingFragment StoreEntitySet="SINHVIENRA">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngayra" ColumnName="ngayra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENVAOs">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.SINHVIENVAO">
+        <MappingFragment StoreEntitySet="SINHVIENVAO">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngaydangki" ColumnName="ngaydangki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewdanhsachphongs">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.viewdanhsachphong">
+        <MappingFragment StoreEntitySet="viewdanhsachphong">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="tenday" ColumnName="tenday" />
+          <ScalarProperty Name="vitri" ColumnName="vitri" />
+          <ScalarProperty Name="loaiphong" ColumnName="loaiphong" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewdanhsachsvvaos">
+      <EntityTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.viewdanhsachsvvao">
+        <MappingFragment StoreEntitySet="viewdanhsachsvvao">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Desso30_NGUYENCHIMANHModel.Store.infopsv_f3" FunctionImportName="infopsv_f3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.infopsv_f3_Result">
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="tiendien" ColumnName="tiendien" />
+          <ScalarProperty Name="tiennuoc" ColumnName="tiennuoc" />
+          <ScalarProperty Name="tienvs" ColumnName="tienvs" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Desso30_NGUYENCHIMANHModel.Store.inforsv_f4" FunctionImportName="inforsv_f4">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.inforsv_f4_Result">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngaydangki" ColumnName="ngaydangki" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Desso30_NGUYENCHIMANHModel.Store.sumtp_f1" FunctionImportName="sumtp_f1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.sumtp_f1_Result">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngayra" ColumnName="ngayra" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="del_pr5" FunctionName="Desso30_NGUYENCHIMANHModel.Store.del_pr5" />
+    <FunctionImportMapping FunctionImportName="delsv_pr6" FunctionName="Desso30_NGUYENCHIMANHModel.Store.delsv_pr6" />
+    <FunctionImportMapping FunctionImportName="selectsv_pr7" FunctionName="Desso30_NGUYENCHIMANHModel.Store.selectsv_pr7">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.selectsv_pr7_Result">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngaydangki" ColumnName="ngaydangki" />
+          <ScalarProperty Name="maphong1" ColumnName="maphong1" />
+          <ScalarProperty Name="tenday" ColumnName="tenday" />
+          <ScalarProperty Name="vitri" ColumnName="vitri" />
+          <ScalarProperty Name="loaiphong" ColumnName="loaiphong" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectsv_pr8" FunctionName="Desso30_NGUYENCHIMANHModel.Store.selectsv_pr8">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Desso30_NGUYENCHIMANHModel.selectsv_pr8_Result">
+          <ScalarProperty Name="masv" ColumnName="masv" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngaydangki" ColumnName="ngaydangki" />
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="masv1" ColumnName="masv1" />
+          <ScalarProperty Name="tienphong" ColumnName="tienphong" />
+          <ScalarProperty Name="tienkhac" ColumnName="tienkhac" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="themhd_pr2" FunctionName="Desso30_NGUYENCHIMANHModel.Store.themhd_pr2" />
+    <FunctionImportMapping FunctionImportName="themphong_pr1" FunctionName="Desso30_NGUYENCHIMANHModel.Store.themphong_pr1" />
+    <FunctionImportMapping FunctionImportName="thongke_pr9" FunctionName="Desso30_NGUYENCHIMANHModel.Store.thongke_pr9" />
+    <FunctionImportMapping FunctionImportName="trungbinh_pr10" FunctionName="Desso30_NGUYENCHIMANHModel.Store.trungbinh_pr10" />
+  </EntityContainerMapping>
+</Mapping>

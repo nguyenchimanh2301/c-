@@ -1,0 +1,14 @@
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\DAOKTX.dll.config
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\DAOKTX.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\DAOKTX.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\Json.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\bin\Debug\Json.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\obj\Debug\DAOKTX.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\obj\Debug\DAOKTX.csproj.CopyComplete
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\obj\Debug\DAOKTX.dll
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\obj\Debug\DAOKTX.pdb
+C:\Users\ASUS\Desktop\QLKT-WINFOM\DAOKTX\obj\Debug\DAOKTX.csprojAssemblyReference.cache

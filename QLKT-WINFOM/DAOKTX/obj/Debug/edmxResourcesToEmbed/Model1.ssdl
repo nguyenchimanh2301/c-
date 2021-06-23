@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Desso30_NGUYENCHIMANHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chitietphongkt">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="solsv" Type="int" />
+    <Property Name="controng" Type="int" />
+    <Property Name="vitri" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Hoadonphong">
+    <Key>
+      <PropertyRef Name="mahd" />
+    </Key>
+    <Property Name="mahd" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="maphong" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="tiendien" Type="int" />
+    <Property Name="tiennuoc" Type="int" />
+    <Property Name="tienvs" Type="int" />
+    <Property Name="tongtien" Type="int" />
+  </EntityType>
+  <EntityType Name="Hoadonsv">
+    <Key>
+      <PropertyRef Name="mahd" />
+    </Key>
+    <Property Name="mahd" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="masv" Type="char" MaxLength="10" />
+    <Property Name="tienphong" Type="int" />
+    <Property Name="tienkhac" Type="int" />
+    <Property Name="tongtien" Type="int" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="users" />
+    </Key>
+    <Property Name="users" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="pass" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Phongkt">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="tenday" Type="nvarchar" MaxLength="30" />
+    <Property Name="vitri" Type="nvarchar" MaxLength="30" />
+    <Property Name="loaiphong" Type="nvarchar" MaxLength="30" />
+    <Property Name="tinhtrang" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="SINHVIENRA">
+    <Key>
+      <PropertyRef Name="masv" />
+    </Key>
+    <Property Name="masv" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="maphong" Type="char" MaxLength="10" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="30" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="ngaysinh" Type="date" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="30" />
+    <Property Name="sdt" Type="char" MaxLength="10" />
+    <Property Name="malop" Type="char" MaxLength="10" />
+    <Property Name="ngayra" Type="date" />
+  </EntityType>
+  <EntityType Name="SINHVIENVAO">
+    <Key>
+      <PropertyRef Name="masv" />
+    </Key>
+    <Property Name="masv" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="maphong" Type="char" MaxLength="10" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="30" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="ngaysinh" Type="date" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="30" />
+    <Property Name="sdt" Type="char" MaxLength="10" />
+    <Property Name="malop" Type="char" MaxLength="10" />
+    <Property Name="ngaydangki" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Desso30_NGUYENCHIMANH.dbo.viewdanhsachphong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="viewdanhsachphong">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="tenday" Type="nvarchar" MaxLength="30" />
+    <Property Name="vitri" Type="nvarchar" MaxLength="30" />
+    <Property Name="loaiphong" Type="nvarchar" MaxLength="30" />
+    <Property Name="tinhtrang" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Desso30_NGUYENCHIMANH.dbo.viewdanhsachsvvao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="viewdanhsachsvvao">
+    <Key>
+      <PropertyRef Name="masv" />
+    </Key>
+    <Property Name="masv" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="malop" Type="char" MaxLength="10" />
+    <Property Name="maphong" Type="char" MaxLength="10" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="30" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="30" />
+    <Property Name="sdt" Type="char" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__chitietph__mapho__48CFD27E">
+    <End Role="Phongkt" Type="Self.Phongkt" Multiplicity="1" />
+    <End Role="chitietphongkt" Type="Self.chitietphongkt" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Phongkt">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="chitietphongkt">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hoadonpho__mapho__440B1D61">
+    <End Role="Phongkt" Type="Self.Phongkt" Multiplicity="1" />
+    <End Role="Hoadonphong" Type="Self.Hoadonphong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phongkt">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="Hoadonphong">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SINHVIENV__mapho__3A81B327">
+    <End Role="Phongkt" Type="Self.Phongkt" Multiplicity="0..1" />
+    <End Role="SINHVIENVAO" Type="Self.SINHVIENVAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phongkt">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="SINHVIENVAO">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="del_pr5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="map" Type="char" Mode="In" />
+  </Function>
+  <Function Name="delsv_pr6" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="msvr" Type="char" Mode="In" />
+  </Function>
+  <Function Name="dem_f2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="map" Type="char" Mode="In" />
+  </Function>
+  <Function Name="infopsv_f3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masv" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="mahd" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="maphong" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="tiendien" Type="int" />
+          <Property Name="tiennuoc" Type="int" />
+          <Property Name="tienvs" Type="int" />
+          <Property Name="tongtien" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="inforsv_f4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="masv" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="maphong" Type="char" MaxLength="10" />
+          <Property Name="hoten" Type="nvarchar" MaxLength="30" />
+          <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+          <Property Name="ngaysinh" Type="date" />
+          <Property Name="diachi" Type="nvarchar" MaxLength="30" />
+          <Property Name="sdt" Type="char" MaxLength="10" />
+          <Property Name="malop" Type="char" MaxLength="10" />
+          <Property Name="ngaydangki" Type="date" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="layho_f6" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="msv" Type="char" Mode="In" />
+  </Function>
+  <Function Name="selectsv_pr7" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="map" Type="char" Mode="In" />
+  </Function>
+  <Function Name="selectsv_pr8" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="malop" Type="char" Mode="In" />
+    <Parameter Name="mahd" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sumtp_f1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masv" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="masv" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="maphong" Type="char" MaxLength="10" />
+          <Property Name="hoten" Type="nvarchar" MaxLength="30" />
+          <Property Name="gioitinh" Type="nvarchar" MaxLength="3" />
+          <Property Name="ngaysinh" Type="date" />
+          <Property Name="diachi" Type="nvarchar" MaxLength="30" />
+          <Property Name="sdt" Type="char" MaxLength="10" />
+          <Property Name="malop" Type="char" MaxLength="10" />
+          <Property Name="ngayra" Type="date" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="themhd_pr2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mahd" Type="char" Mode="In" />
+    <Parameter Name="msv" Type="nvarchar" Mode="In" />
+    <Parameter Name="tp" Type="int" Mode="In" />
+    <Parameter Name="td" Type="int" Mode="In" />
+    <Parameter Name="tt" Type="int" Mode="In" />
+  </Function>
+  <Function Name="themphong_pr1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="maphong" Type="char" Mode="In" />
+    <Parameter Name="day" Type="nvarchar" Mode="In" />
+    <Parameter Name="vt" Type="nvarchar" Mode="In" />
+    <Parameter Name="lp" Type="nvarchar" Mode="In" />
+    <Parameter Name="tt" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="thongke_pr9" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="trungbinh_pr10" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Desso30_NGUYENCHIMANHModelStoreContainer">
+    <EntitySet Name="chitietphongkt" EntityType="Self.chitietphongkt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hoadonphong" EntityType="Self.Hoadonphong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hoadonsv" EntityType="Self.Hoadonsv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Phongkt" EntityType="Self.Phongkt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SINHVIENRA" EntityType="Self.SINHVIENRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SINHVIENVAO" EntityType="Self.SINHVIENVAO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="viewdanhsachphong" EntityType="Self.viewdanhsachphong" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [viewdanhsachphong].[maphong] AS [maphong], 
+    [viewdanhsachphong].[tenday] AS [tenday], 
+    [viewdanhsachphong].[vitri] AS [vitri], 
+    [viewdanhsachphong].[loaiphong] AS [loaiphong], 
+    [viewdanhsachphong].[tinhtrang] AS [tinhtrang]
+    FROM [dbo].[viewdanhsachphong] AS [viewdanhsachphong]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="viewdanhsachsvvao" EntityType="Self.viewdanhsachsvvao" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [viewdanhsachsvvao].[masv] AS [masv], 
+    [viewdanhsachsvvao].[malop] AS [malop], 
+    [viewdanhsachsvvao].[maphong] AS [maphong], 
+    [viewdanhsachsvvao].[hoten] AS [hoten], 
+    [viewdanhsachsvvao].[gioitinh] AS [gioitinh], 
+    [viewdanhsachsvvao].[diachi] AS [diachi], 
+    [viewdanhsachsvvao].[sdt] AS [sdt]
+    FROM [dbo].[viewdanhsachsvvao] AS [viewdanhsachsvvao]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__chitietph__mapho__48CFD27E" Association="Self.FK__chitietph__mapho__48CFD27E">
+      <End Role="Phongkt" EntitySet="Phongkt" />
+      <End Role="chitietphongkt" EntitySet="chitietphongkt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hoadonpho__mapho__440B1D61" Association="Self.FK__Hoadonpho__mapho__440B1D61">
+      <End Role="Phongkt" EntitySet="Phongkt" />
+      <End Role="Hoadonphong" EntitySet="Hoadonphong" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SINHVIENV__mapho__3A81B327" Association="Self.FK__SINHVIENV__mapho__3A81B327">
+      <End Role="Phongkt" EntitySet="Phongkt" />
+      <End Role="SINHVIENVAO" EntitySet="SINHVIENVAO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ff3dfec598af491d9d1dd63d8b5af21a" Name="Diagram1">
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.chitietphongkt" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.Hoadonphong" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.Hoadonsv" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.Login" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.Phongkt" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.SINHVIENRA" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.SINHVIENVAO" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.viewdanhsachphong" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Desso30_NGUYENCHIMANHModel.viewdanhsachsvvao" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="Desso30_NGUYENCHIMANHModel.FK__chitietph__mapho__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="Desso30_NGUYENCHIMANHModel.FK__Hoadonpho__mapho__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Desso30_NGUYENCHIMANHModel.FK__SINHVIENV__mapho__3A81B327" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
